@@ -70,3 +70,6 @@ fi
 # Startup Grafana :3000
 service grafana-server restart
 #update-rc.d grafana-server defaults
+
+# Setup link for UEMCLI
+ln -s /opt/dellemc/uemcli/bin/uemcli.sh /usr/bin/uemcli
