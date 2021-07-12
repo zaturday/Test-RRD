@@ -51,12 +51,16 @@ RUN apt-get install -yq \
 # Install Grafana
 #RUN wget https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana_5.1.4_amd64.deb
 COPY grafana_5.1.4_amd64.deb /root/grafana_5.1.4_amd64.deb
+COPY unispherecli-linux-64-x86-en-us_5.1.0.1376170-2_amd64.deb /root/unispherecli-linux-64-x86-en-us_5.1.0.1376170-2_amd64.deb
 RUN chmod +x /root/grafana_5.1.4_amd64.deb
+RUN chmod +x /root/unispherecli-linux-64-x86-en-us_5.1.0.1376170-2_amd64.deb
 RUN dpkg -i /root/grafana_5.1.4_amd64.deb
+RUN dpkg -i /root/unispherecli-linux-64-x86-en-us_5.1.0.1376170-2_amd64.deb
 
 # Cleanup
 RUN apt-get clean
 RUN rm -f grafana_5.1.4_amd64.deb
+RUN rm -f unispherecli-linux-64-x86-en-us_5.1.0.1376170-2_amd64.deb
 
 # setup default user
 RUN useradd lpar2rrd -U -s /bin/bash -m
