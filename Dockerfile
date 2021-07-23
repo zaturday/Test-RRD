@@ -2,7 +2,8 @@
 # -- Stor2rrd/Lapr2rrd/Grafana --
 # http://docs.grafana.org/installation/debian/ < grafana
 # Original docker image from xorux/apps
-# VERSION        1.0
+# VERSION        1.1
+
 
 FROM       debian:jessie
 MAINTAINER gleeman2 (graph-rrd/apps)
