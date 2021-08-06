@@ -38,7 +38,7 @@ RUN apt-get install -yq \
     libsnmp-perl \
     openssh-client \
     openssh-server \
-    vim \
+    # vim \
     rsyslog \
     sudo \
     curl \
